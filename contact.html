@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>cyrusv</title>
+	<link rel="icon" type="image/ico" href="/images/cyrusv.ico">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script language="JavaScript" type="text/javascript" src="/script.js"></script>
+</head>
+
+<body>
+
+<div id="contentwrapper">
+
+	<h1>
+	cyrusv<span id="lastname">afadari</span>
+	</h1>
+
+	<div id="rightwrapper">
+
+		<div id="contact" class="content">
+		<p>&#099;&#121;&#114;&#117;&#115;&#118;&#064;alum.&#109;&#105;&#116;&#046;&#101;&#100;&#117;</p>
+		<p><a href="http://www.linkedin.com/pub/cyrus-vafadari/28/886/ba3">LinkedIn</a></p>
+		<p><a href="https://twitter.com/#!/cvafadari">Twitter</a> @cvafadari</p>
+		</div>
+
+	</div>
+
+	<div id="leftwrapper">
+		<nav>
+
+		<ul id="navbar">
+			<a href="blog"><li>blog</li></a>
+			<a href="work"><li>work</li></a>
+			<a href="resume.html"><li>resum&eacute;</li></a>
+			<a href="contact.html"><li>contact</li></a>
+			<li onClick="javascript:login()">members only</li>
+		</ul>
+		</nav>
+	</div>
+
+		<div id="barwrapper">
+			<div class="bar orangebar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+</div>
+
+	<div id="light" class="white_content">
+		<h2>Members Only</h2>
+		<form method="POST" action="http://web.mit.edu/cyrusv/www/login.php">
+			<p class="center"><input type="text" id="username" name="username" size="15" value="username" onClick="javascript:focustext('username')" onblur="javascript:blurtext('username')" required/></p>
+			<p class="center"><input type="password" id="password" name="password" size="15" value="000000000000000" onClick="javascript:focustext('password')" onblur="javascript:blurtext('password')" required/></p>
+			<p class="center"><input type="submit" name="login" value="Login" class="activetext" /></p>
+
+		</form>
+	</div>
+
+	<div id="fade" class="black_overlay" onClick="javascript:leavelogin()"></div>
+
+</body>
+</html>

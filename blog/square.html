@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>cyrusv</title>
+	<link rel="icon" type="image/ico" href="/images/cyrusv.ico">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script language="JavaScript" type="text/javascript" src="/script.js"></script>
+</head>
+
+<body>
+
+<div id="contentwrapper">
+
+	<h1>
+	cyrusv<span id="lastname">afadari</span>
+	</h1>
+
+	<div id="rightwrapper">
+
+	<div id="blog2" class="content">
+		<p class="date">29 September 2012</p>
+		<p>
+		Square recently released a new product: Pay with Square. Yesterday, I walked up to my favorite food truck (Momogoose), and told them my order. They asked
+		my name, and I told them. I got my food and left, not once touching my wallet or phone. They use geo-location
+		to notify the cashier that you are approaching, and shows your profile with a name and picture, charging in the background after your identity is confirmed.
+		It blows my colleagues' minds that Google wallet or Paypal doesn't already do this.
+		Why can't I just pay with Paypal at a food truck? And why is Google wallet struggling to gain market share?
+		</p>
+		<p>
+		The answer to these questions is probably quite complicated, but we can learn a lot by examining why Square chose not to come out of the blocks
+		with Pay with Square. I believe this was a conscious decision by the founder, a decision a lot of engineers would disagree with: to found the company on a phycial
+		reader using physical credit cards. Why bother making
+		a physical device? Why are people still carrying physical credit cards? A forward-thinking software engineer knows that the way to be ahead of the curve
+		would be to go straight software and use some network communication. The reason Square made a card-reader is simple: Everybody already uses cards.
+		The card reader is an absurdly well-made stepping stone to their midterm and longterm plan of truly great solutions.
+		</p>
+		<p>
+		An MIT student or recent graduate could never have gotten Pay with Square to a large audience. This is because the ugly, clunky solution had to come first to win
+		trust and traction of the general public. Then, they can be eased into a smarter way of doing things.
+		</p>
+	</div>
+
+	</div>
+
+	<div id="leftwrapper">
+		<nav>
+
+		<ul id="navbar">
+			<a href="/blog"><li>blog</li></a>
+			<a href="/work"><li>work</li></a>
+			<a href="/resume.html"><li>resum&eacute;</li></a>
+			<a href="/contact.html"><li>contact</li></a>
+			<li onClick="javascript:login()">members only</li>
+		</ul>
+		</nav>
+	</div>
+
+		<div id="barwrapper">
+			<div class="bar orangebar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+</div>
+
+	<div id="light" class="white_content">
+		<h2>Members Only</h2>
+		<form method="POST" action="http://web.mit.edu/cyrusv/www/login.php">
+			<p class="center"><input type="text" id="username" name="username" size="15" value="username" onClick="javascript:focustext('username')" onblur="javascript:blurtext('username')" required/></p>
+			<p class="center"><input type="password" id="password" name="password" size="15" value="000000000000000" onClick="javascript:focustext('password')" onblur="javascript:blurtext('password')" required/></p>
+			<p class="center"><input type="submit" name="login" value="Login" class="activetext" /></p>
+
+		</form>
+	</div>
+
+	<div id="fade" class="black_overlay" onClick="javascript:leavelogin()"></div>
+
+</body>
+</html>

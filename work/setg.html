@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>cyrusv</title>
+	<link rel="icon" type="image/ico" href="/images/cyrusv.ico">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script language="JavaScript" type="text/javascript" src="/script.js"></script>
+</head>
+
+<body>
+
+<div id="contentwrapper">
+
+	<h1>
+	cyrusv<span id="lastname">afadari</span>
+	</h1>
+
+	<div id="rightwrapper">
+
+		<div id="setg" class="content">
+			<p><a href="http://web.mit.edu/setg/SETG/Mainpage.html">SETG</a>, the Search for Extraterrestrial Genomes, is a joint MIT-Harvard research project at Massachusetts General Hospital to design, test, and deploy a robotic device to test the surface of Mars for genomic and DNA-like molecules.</p>
+			<p>My task was to test the robustness of Polymerase Chain Reactions (PCR is a common DNA-amplification prodedure) against irradiation doses from a 6-month journey to Mars.</p>
+			<p>Using various fluxes and fluences of neutron radiation from the <a href="http://web.mit.edu/nrl/www/reactor/reactor.htm">MIT NRL</a>, proton spectra from the <a href="http://www.massgeneral.org/radiationoncology/burrprotoncenter.aspx">Frances Burr Proton Proton Cyclotron and Beam</a>, and Heavy Ion beams at <a href="http://www.bnl.gov/medical/nasa/nsrl_description.asp">Brookhaven NSRL</a>, I determined that cosmic radiation has negligible effect on the reagents of PCR over a 6-month space flight. At higher doses (5+ Gray), we did see significant degradation of the reaction, but this is far outside the expected dose from a Mars trip.
+			<a href="http://online.liebertpub.com/doi/abs/10.1089/ast.2012.0869"><p>Publication.</p></a>
+		</div>
+
+
+	</div>
+
+	<div id="leftwrapper">
+		<nav>
+
+		<ul id="navbar">
+			<a href="/blog"><li>blog</li></a>
+			<a href="/work"><li>work</li></a>
+			<a href="/resume.html"><li>resum&eacute;</li></a>
+			<a href="/contact.html"><li>contact</li></a>
+			<li onClick="javascript:login()">members only</li>
+		</ul>
+		</nav>
+	</div>
+
+		<div id="barwrapper">
+			<div class="bar orangebar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+</div>
+
+	<div id="light" class="white_content">
+		<h2>Members Only</h2>
+		<form method="POST" action="http://web.mit.edu/cyrusv/www/login.php">
+			<p class="center"><input type="text" id="username" name="username" size="15" value="username" onClick="javascript:focustext('username')" onblur="javascript:blurtext('username')" required/></p>
+			<p class="center"><input type="password" id="password" name="password" size="15" value="000000000000000" onClick="javascript:focustext('password')" onblur="javascript:blurtext('password')" required/></p>
+			<p class="center"><input type="submit" name="login" value="Login" class="activetext" /></p>
+
+		</form>
+	</div>
+
+	<div id="fade" class="black_overlay" onClick="javascript:leavelogin()"></div>
+
+</body>
+</html>

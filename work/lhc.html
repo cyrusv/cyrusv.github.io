@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>cyrusv</title>
+	<link rel="icon" type="image/ico" href="/images/cyrusv.ico">
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<script language="JavaScript" type="text/javascript" src="/script.js"></script>
+</head>
+
+<body>
+
+<div id="contentwrapper">
+
+	<h1>
+	cyrusv<span id="lastname">afadari</span>
+	</h1>
+
+	<div id="rightwrapper">
+
+		<div id="lhc" class="content">
+		<p>I worked with the MIT's Heavy Ion Group at CERN. Our group analyzed data at the <a href="http://public.web.cern.ch/public/en/lhc/cms-en.html">CMS detector</a>. However, heavy ion data (lead, specifically) was unavailable during my time with the team.</p>
+		<p>We hypothesized that we could would observe heavy ion-like behavior in p-p collisions due to the record-breaking energies at the LHC (7TeV at the time). Our group discovered many indicators of quark-gluon plasma in high multiplicity p-p events, characterized by non-uniform angular correlations.</p>
+		<p>A major concern about our study is that "pile-up" events  (2+ distinct vertices mistakenly traced back as a single vertex) bias the statistical analyses. My task was to quantify the effects of pile-up on our study.</p>
+		<p>Analyzing billions of collisions (using C++ based "<a href="http://root.cern.ch/drupal/">Root</a>"), and comparing them to monte-carlo generated Pythia data, I determined that, while pile-up effects increase at higher multiplicity events (up to 40%), their effects could be distinguished with more advanced algorithms to bring indistinguishable pile-up rates down to 10%. This rate turned out to be tolerable to the rest of the study, confirming that the heavy ion-like correlations were not due to pile-up events.</p>
+		<p><a href="http://cdsweb.cern.ch/record/1293115/files/jhep.1009.091.pdf">Publication</a></p>
+		</div>
+	</div>
+
+	<div id="leftwrapper">
+		<nav>
+
+		<ul id="navbar">
+			<a href="/blog"><li>blog</li></a>
+			<a href="/work"><li>work</li></a>
+			<a href="/resume.html"><li>resum&eacute;</li></a>
+			<a href="/contact.html"><li>contact</li></a>
+			<li onClick="javascript:login()">members only</li>
+		</ul>
+		</nav>
+	</div>
+
+		<div id="barwrapper">
+			<div class="bar orangebar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+</div>
+
+	<div id="light" class="white_content">
+		<h2>Members Only</h2>
+		<form method="POST" action="http://web.mit.edu/cyrusv/www/login.php">
+			<p class="center"><input type="text" id="username" name="username" size="15" value="username" onClick="javascript:focustext('username')" onblur="javascript:blurtext('username')" required/></p>
+			<p class="center"><input type="password" id="password" name="password" size="15" value="000000000000000" onClick="javascript:focustext('password')" onblur="javascript:blurtext('password')" required/></p>
+			<p class="center"><input type="submit" name="login" value="Login" class="activetext" /></p>
+
+		</form>
+	</div>
+
+	<div id="fade" class="black_overlay" onClick="javascript:leavelogin()"></div>
+
+</body>
+</html>
