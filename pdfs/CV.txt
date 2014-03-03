@@ -1,0 +1,64 @@
+Cyrus Vafadari
+cyrusv@alum.mit.edu
+
+## Education ##
+MIT: B.S. Nuclear Science and Engineering, 4.6/5.0
+
+
+## Industry Experience ##
+Sookbox, LLC, 2011 - 2014, Cambridge, MA
+ - CTO
+ - Raised $1.2M
+ - Designed and wrote back-end in primarily Python (rewritten from PHP)
+ - Managed team of 5 engineers
+
+Barrett Technology, 2009, Watertown, MA
+ - Mechanical Engineering Intern
+ - Implemented revision control system for the company's firmware (SVN)
+ - Designed in Solidworks and prototyped part for WAM robotic arm
+
+
+## Scientific Experience ##
+
+Thesis
+ -
+
+Compact Muon Solenoid, LHC, CERN, 2010, Geneva, Switzerland
+ - Observation of Long-Range, Near-Side Angular Correlations in Proton-Proton Collisions at the LHC
+ - Predicting probability of piled-up vertices as a function of multiplicity in proton-proton collisions
+ - Analyzed over a billion collisions and Monte Carlo simulations in a C++ framework
+ - Used Condor for grid computing
+ - Discovered evidence of quark-gluon plasma in high-multiplicity p-p collisions, never before observed
+ - Project publication: doi:10.1007/JHEP09(2010)091
+
+
+Dept. Molecular Biology, Mass. General Hospital, 2009-2013, Boston, MA
+ - Third author: "Radiation Resistance of Biological Reagents for In Situ Life Detection"
+ - SETG, MIT/Harvard group designing and constructing a life-detection device to work on Mars
+ - Designed and executed experiments simulating cosmic radiation on a flight to Mars
+ - Irradiated over \$40,000 of reagents with over 10 Gy of radiation from 5 different types of radiation
+ - Project publication: 10.1089/ast.2012.0869
+
+
+
+## Patents Pending ##
+
+Filed January 2014, Co-Inventor
+ - Method and System for Providing Digital Content. US PCT/US2014/010243.
+ - Digital Content Connectivity and Control via a Plurality of Controllers that are treated as a Single Controller. US 14/147,397.
+ - Digital Content Connectivity and Control via a Plurality of Controller that are Treated Discriminatively. US 14/149,541.
+ - Configuring, Networking, and Controlling a Plurality of Unique Network-Capable Devices. US 14/149,726.
+
+
+
+## Activities ##
+
+Track and Field, Pole Vault, 2005-2013
+ - MIT Varsity, PR 4.85m (16 ft)
+ - All-New England (DI, DII, and DIII)
+ - 2-time New England DIII Champion
+
+Sigma Alpha Epsilon, Founding member, 1st President, 2009-2013
+ - Nation-­wide Colony of the Year, 2-­time winner of MIT Service Cup, nation-wide Zeal Award winner, MIT Best New Member Program, and MIT Most Improved Chapter
+ - Served as recruitment chair (60\% increase in membership in my officership), managed \$10,000 budget
+
