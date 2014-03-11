@@ -18,5 +18,12 @@ canvas {
     display: block;
     width: 200px;
     height: 200px;
+}
 
+audio {
+    position:fixed;
+    bottom:50px;
+    left:50%;
+    margin-left: -200px;
+    width: 400px;
 }

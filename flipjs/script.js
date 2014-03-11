@@ -8,7 +8,7 @@ int i = 0;
 String URL = "https://soundcloud.com/lafelix/starwin-boys-noize-la-felix";
 String client_id = "8000818c2ef2e0c6d536dacf2ee7fd50";
 String redirect_uri = "http://localhost/flipjs";
-String streamUrl = "http://api.soundcloud.com/tracks/108242177/stream";
+String streamUrl = "http://api.soundcloud.com/tracks/108242177/stream?client_id=" + client_id;
 
 
 class SoundCloudAudioSource {
@@ -17,14 +17,12 @@ class SoundCloudAudioSource {
     var player = document.getElementById(audioID);
     }
 
-
     void playStream () {
-        console.log("HI");
-        console.log(player);
         player.setAttribute('src', streamUrl);
         player.play();
     }
 }
+
 //     var analyser;
 //     var audioCtx = new (window.AudioContext || window.webkitAudioContext);
 //     analyser = audioCtx.createAnalyser();
@@ -68,8 +66,8 @@ void setup() {
             alert("ERROR!");
             return;
         }
-        console.log(sound);
         audioSource.playStream();
+
     });
 
 
