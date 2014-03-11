@@ -15,42 +15,37 @@ class SoundCloudAudioSource {
 
     SoundCloudAudioSource(audioID) {
     var player = document.getElementById(audioID);
+    var audioCtx = new (window.AudioContext || window.webkitAudioContext);
+    node = audioCtx.createAnalyser();
+    node.fftSize = 256;
+    var source = audioCtx.createMediaElementSource(player);
+    source.connect(node);
+    node.connect(audioCtx.destination);
+
+    volume = 0;
+    streamData = new Uint8Array(node.fftSize/2);
+    setInterval(sampleAudioStream, 20);
     }
 
-    void playStream () {
+    void playStream() {
         player.setAttribute('src', streamUrl);
         player.play();
     }
+
+    void sampleAudioStream() {
+        node.getByteFrequencyData(self.streamData);
+        // calculate an overall volume value
+        var total = 0;
+        for (var i = 0; i < 80; i++) { // Only first 80 bins, else too loud with treble
+            total += self.streamData[i];
+        }
+        volume = total;
+    }
+
+    int get_volume() {
+        return volume;
+    }
 }
-
-//     var analyser;
-//     var audioCtx = new (window.AudioContext || window.webkitAudioContext);
-//     analyser = audioCtx.createAnalyser();
-//     analyser.fftSize = 256;
-//     // Hook up the <audio> element
-//     var source = audioCtx.createMediaElementSource(player);
-//     source.connect(analyser);
-//     analyser.connect(audioCtx.destination);
-//     var sampleAudioStream = function() {
-//         // This closure is where the magic happens.
-//         // Because it gets called with setInterval below, continuously samples the audio data
-//         // and updates the streamData and volume properties.
-//         // This the SoundCouldAudioSource function can be passed to a visualization routine and
-//         // continue to give real-time data on the audio stream.
-//         analyser.getByteFrequencyData(self.streamData);
-//         // calculate an overall volume value
-//         var total = 0;
-//         for (var i = 0; i < 80; i++) { // get the volume from the first 80 bins, else it gets too loud with treble
-//             total += self.streamData[i];
-//         }
-//         self.volume = total;
-//     };
-//     setInterval(sampleAudioStream, 20); //
-
-//     // Public properties and methods
-//     this.volume = 0;
-//     this.streamData = new Uint8Array(analyser.fftSize/2);
-// }
 
 audioSource = new SoundCloudAudioSource('player');
 
@@ -67,15 +62,11 @@ void setup() {
             return;
         }
         audioSource.playStream();
-
     });
-
-
-
 }
 
 void draw() {
+    i = Math.floor(audioSource.get_volume()/10000*256);
     background(i);
-    i = i+1;
 }
 
