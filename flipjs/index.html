@@ -3,18 +3,22 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>flip</title>
+    <title>soundscape</title>
     <!-- <link rel="icon" type="image/ico" href="images/cyrusv.ico"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="//connect.soundcloud.com/sdk.js"></script>
     <script type="text/processing" data-processing-target="visualizer" src="script.js"></script>
     <script language="JavaScript" type="text/javascript" src="processing-1.4.1.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript.js"></script>
+
 </head>
 
 <body>
 
 <canvas id="visualizer"></canvas>
+<button id="fullscreen" onclick="goFullScreen();">Fullscreen</button>
 <audio id="player" controls></audio>
+
 
 </body>
 </html>

@@ -6,9 +6,10 @@ https://github.com/michaelbromley/soundcloud-visualizer/blob/master/js/app.js
 
 int i = 0;
 String URL = "https://soundcloud.com/lafelix/starwin-boys-noize-la-felix";
+// String URL = "https://soundcloud.com/four-tet/live-in-tokyo";
+
 String client_id = "8000818c2ef2e0c6d536dacf2ee7fd50";
 String redirect_uri = "http://localhost/flipjs";
-String streamUrl = "http://api.soundcloud.com/tracks/108242177/stream?client_id=" + client_id;
 
 
 class SoundCloudAudioSource {
@@ -24,19 +25,21 @@ class SoundCloudAudioSource {
 
     volume = 0;
     streamData = new Uint8Array(node.fftSize/2);
-    setInterval(sampleAudioStream, 20);
+    setInterval(sampleAudioStream, 10);
     }
 
-    void playStream() {
-        player.setAttribute('src', streamUrl);
+    void playStream(streamURL) {
+        player.setAttribute('src', streamURL);
         player.play();
     }
 
     void sampleAudioStream() {
         node.getByteFrequencyData(self.streamData);
-        // calculate an overall volume value
+
         var total = 0;
-        for (var i = 0; i < 80; i++) { // Only first 80 bins, else too loud with treble
+
+        // Only first 80 bins, else too loud with treble
+        for (var i=20; i<50; i++) {
             total += self.streamData[i];
         }
         volume = total;
@@ -50,6 +53,7 @@ class SoundCloudAudioSource {
 audioSource = new SoundCloudAudioSource('player');
 
 void setup() {
+    size(screenWidth, screenHeight);
     background(0);
     SC.initialize({
         client_id: client_id,
@@ -61,7 +65,7 @@ void setup() {
             alert("ERROR!");
             return;
         }
-        audioSource.playStream();
+        audioSource.playStream(sound.stream_url + "?client_id=" + client_id);
     });
 }
 
@@ -69,4 +73,3 @@ void draw() {
     i = Math.floor(audioSource.get_volume()/10000*256);
     background(i);
 }
-
