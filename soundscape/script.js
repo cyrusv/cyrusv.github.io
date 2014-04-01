@@ -25,7 +25,6 @@ class SoundCloudAudioSource {
 
     volume = 0;
     streamData = new Uint8Array(node.fftSize/2);
-    setInterval(sampleAudioStream, 10);
     }
 
     void playStream(streamURL) {
@@ -33,7 +32,7 @@ class SoundCloudAudioSource {
         player.play();
     }
 
-    void sampleAudioStream() {
+    int sampleAudioStream() {
         node.getByteFrequencyData(self.streamData);
 
         var total = 0;
@@ -42,11 +41,7 @@ class SoundCloudAudioSource {
         for (var i=20; i<50; i++) {
             total += self.streamData[i];
         }
-        volume = total;
-    }
-
-    int get_volume() {
-        return volume;
+        return total;
     }
 }
 
@@ -70,6 +65,6 @@ void setup() {
 }
 
 void draw() {
-    i = Math.floor(audioSource.get_volume()/10000*256);
+    i = Math.floor(audioSource.sampleAudioStream()/10000*256);
     background(i);
 }
